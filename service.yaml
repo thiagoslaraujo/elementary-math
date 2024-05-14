@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elementary-math-core
+spec:
+  selector:
+    app: elementary-math-core
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      nodePort: 30080
+      port: 8080
+      targetPort: 8080

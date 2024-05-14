@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elementary-math-core
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: elementary-math-core
+  template:
+    metadata:
+      labels: 
+        app: elementary-math-core
+    spec:
+      containers:
+        - name: elementary-math-core
+          image: thiagoslaraujo/elementary-math-core:latest
+          ports:
+            - containerPort: 8080
