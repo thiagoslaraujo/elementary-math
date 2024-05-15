@@ -4,8 +4,10 @@ pipeline {
 	stages {
 		stage("Build Docker Image") {
 			steps {
-				sh "echo 'Construção da imagem'"
-				def dockerImage = docker.build("elementary-math-core")
+				script {
+					sh "echo 'Construção da imagem'"
+					def dockerImage = docker.build("elementary-math-core")
+				}
 			}
 		}
 
