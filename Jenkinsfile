@@ -5,7 +5,7 @@ pipeline {
 		stage("Build Docker Image") {
 			steps {
 				sh "echo 'Construção da imagem'"
-				dockerImage = docker.build("elementary-math-core:v1")
+				//dockerImage = docker.build("elementary-math-core:v1")
 			}
 		}
 
